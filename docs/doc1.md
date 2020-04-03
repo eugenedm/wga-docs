@@ -4,7 +4,7 @@ title: Style Guide
 sidebar_label: Style Guide
 ---
 
-Yooooooooo
+Yooooooooo man
 
 You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
 
