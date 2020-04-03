@@ -11329,7 +11329,7 @@ function renderRoutes(routes, extraProps, switchProps) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({"plugins":[],"themes":[],"customFields":{},"themeConfig":{"navbar":{"title":"My Site","logo":{"alt":"My Site Logo","src":"img/logo.svg"},"links":[{"to":"docs/doc1","activeBasePath":"docs","label":"Docs","position":"left"},{"to":"blog","label":"Blog","position":"left"},{"href":"https://github.com/euegnedm/wga-docs","label":"GitHub","position":"right"}]},"footer":{"style":"dark","links":[{"title":"Docs","items":[{"label":"Style Guide","to":"docs/doc1"},{"label":"Second Doc","to":"docs/doc2"}]},{"title":"Community","items":[{"label":"Stack Overflow","href":"https://stackoverflow.com/questions/tagged/docusaurus"},{"label":"Discord","href":"https://discordapp.com/invite/docusaurus"}]},{"title":"Social","items":[{"label":"Blog","to":"blog"},{"label":"GitHub","href":"https://github.com/eugenedm/wga-docs"},{"label":"Twitter","href":"https://twitter.com/docusaurus"}]}],"copyright":"Copyright © 2020 My Project, Inc. Built with Docusaurus."}},"title":"WGA","tagline":"WGA docs","url":"https://eugenedm.github.io","baseUrl":"/wga-docs/","favicon":"img/favicon.ico","organizationName":"eugenedm","projectName":"wga-docs","presets":[["@docusaurus/preset-classic",{"docs":{"sidebarPath":"/Users/naughty/code/wga-docs/sidebars.js","editUrl":"https://github.com/eugenedm/wga-docs/edit/master/website/"},"theme":{"customCss":"/Users/naughty/code/wga-docs/src/css/custom.css"}}]]});
+/* harmony default export */ __webpack_exports__["a"] = ({"plugins":[],"themes":[],"customFields":{},"themeConfig":{"navbar":{"title":"My Site","logo":{"alt":"My Site Logo","src":"img/logo.svg"},"links":[{"to":"docs/doc1","activeBasePath":"docs","label":"Docs","position":"left"},{"to":"blog","label":"Blog","position":"left"},{"href":"https://github.com/eugenedm/wga-docs","label":"GitHub","position":"right"}]},"footer":{"style":"dark","links":[{"title":"Docs","items":[{"label":"Style Guide","to":"docs/doc1"},{"label":"Second Doc","to":"docs/doc2"}]},{"title":"Community","items":[{"label":"Stack Overflow","href":"https://stackoverflow.com/questions/tagged/docusaurus"},{"label":"Discord","href":"https://discordapp.com/invite/docusaurus"}]},{"title":"Social","items":[{"label":"Blog","to":"blog"},{"label":"GitHub","href":"https://github.com/eugenedm/wga-docs"},{"label":"Twitter","href":"https://twitter.com/docusaurus"}]}],"copyright":"Copyright © 2020 My Project, Inc. Built with Docusaurus."}},"title":"WGA","tagline":"WGA docs","url":"https://eugenedm.github.io","baseUrl":"/wga-docs/","favicon":"img/favicon.ico","organizationName":"eugenedm","projectName":"wga-docs","presets":[["@docusaurus/preset-classic",{"docs":{"sidebarPath":"/Users/naughty/code/wga-docs/sidebars.js","editUrl":"https://github.com/eugenedm/wga-docs/edit/master/website/"},"theme":{"customCss":"/Users/naughty/code/wga-docs/src/css/custom.css"}}]]});
 
 /***/ }),
 /* 64 */
@@ -11942,16 +11942,16 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, 
 
       if (n === 1) {
         // Fade out
-        css(progress, {
-          transition: 'none',
-          opacity: 1
+        css(progress, { 
+          transition: 'none', 
+          opacity: 1 
         });
         progress.offsetWidth; /* Repaint */
 
         setTimeout(function() {
-          css(progress, {
-            transition: 'all ' + speed + 'ms linear',
-            opacity: 0
+          css(progress, { 
+            transition: 'all ' + speed + 'ms linear', 
+            opacity: 0 
           });
           setTimeout(function() {
             NProgress.remove();
@@ -12079,7 +12079,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, 
     if (NProgress.isRendered()) return document.getElementById('nprogress');
 
     addClass(document.documentElement, 'nprogress-busy');
-
+    
     var progress = document.createElement('div');
     progress.id = 'nprogress';
     progress.innerHTML = Settings.template;
@@ -12088,7 +12088,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, 
         perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
         parent   = document.querySelector(Settings.parent),
         spinner;
-
+    
     css(bar, {
       transition: 'all 0 linear',
       transform: 'translate3d(' + perc + '%,0,0)'
@@ -12199,7 +12199,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, 
 
   var queue = (function() {
     var pending = [];
-
+    
     function next() {
       var fn = pending.shift();
       if (fn) {
@@ -12214,10 +12214,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, 
   })();
 
   /**
-   * (Internal) Applies css properties to an element, similar to the jQuery
+   * (Internal) Applies css properties to an element, similar to the jQuery 
    * css method.
    *
-   * While this helper does assist with vendor prefixed property names, it
+   * While this helper does assist with vendor prefixed property names, it 
    * does not perform any manipulation of values prior to setting styles.
    */
 
@@ -12258,7 +12258,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, 
 
     return function(element, properties) {
       var args = arguments,
-          prop,
+          prop, 
           value;
 
       if (args.length == 2) {
@@ -12289,7 +12289,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, 
     var oldList = classList(element),
         newList = oldList + name;
 
-    if (hasClass(oldList, name)) return;
+    if (hasClass(oldList, name)) return; 
 
     // Trim the opening space.
     element.className = newList.substring(1);
@@ -12313,8 +12313,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, 
   }
 
   /**
-   * (Internal) Gets a space separated list of the class names on the element.
-   * The list is wrapped with a single space on each end to facilitate finding
+   * (Internal) Gets a space separated list of the class names on the element. 
+   * The list is wrapped with a single space on each end to facilitate finding 
    * matches within the list.
    */
 
@@ -13165,7 +13165,7 @@ function clone(obj)
 	if (obj instanceof Object)
 	{
 		var clonedObj = (obj instanceof Array) ? [] : {};
-
+		
 		for (var i in obj)
 		{
 			if ( obj.hasOwnProperty(i) )
@@ -13173,10 +13173,10 @@ function clone(obj)
 				clonedObj[i] = clone( obj[i] );
 			}
 		}
-
+		
 		return clonedObj;
 	}
-
+	
 	return obj;
 }
 
@@ -13207,7 +13207,7 @@ function shallowMerge(target, source)
 			}
 		}
 	}
-
+	
 	return target;
 }
 
@@ -13245,7 +13245,7 @@ function joinPath(pathArray)
 function resolveDotSegments(pathArray)
 {
 	var pathAbsolute = [];
-
+	
 	pathArray.forEach( function(dir)
 	{
 		if (dir !== "..")
@@ -13264,7 +13264,7 @@ function resolveDotSegments(pathArray)
 			}
 		}
 	});
-
+	
 	return pathAbsolute;
 }
 
@@ -15346,7 +15346,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-const frontMatter={id:'doc3',title:'This is Document Number 3'};const metadata={"id":"doc3","title":"This is Document Number 3","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.","source":"@site/docs/doc3.md","permalink":"/wga-docs/docs/doc3","editUrl":"https://github.com/eugenedm/wga-docs/edit/master/docs/doc3.md","sidebar":"someSidebar","previous":{"title":"Document Number 2","permalink":"/wga-docs/docs/doc2"},"next":{"title":"Powered by MDX","permalink":"/wga-docs/docs/mdx"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Duis et egestas libero, imperdiet faucibus ipsum. Sed posuere eget urna vel feugiat. Vivamus a arcu sagittis, fermentum urna dapibus, congue lectus. Fusce vulputate porttitor nisl, ac cursus elit volutpat vitae. Nullam vitae ipsum egestas, convallis quam non, porta nibh. Morbi gravida erat nec neque bibendum, eu pellentesque velit posuere. Fusce aliquam erat eu massa eleifend tristique.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Sed consequat sollicitudin ipsum eget tempus. Integer a aliquet velit. In justo nibh, pellentesque non suscipit eget, gravida vel lacus. Donec odio ante, malesuada in massa quis, pharetra tristique ligula. Donec eros est, tristique eget finibus quis, semper non nisl. Vivamus et elit nec enim ornare placerat. Sed posuere odio a elit cursus sagittis.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Phasellus feugiat purus eu tortor ultrices finibus. Ut libero nibh, lobortis et libero nec, dapibus posuere eros. Sed sagittis euismod justo at consectetur. Nulla finibus libero placerat, cursus sapien at, eleifend ligula. Vivamus elit nisl, hendrerit ac nibh eu, ultrices tempus dui. Nam tellus neque, commodo non rhoncus eu, gravida in risus. Nullam id iaculis tortor.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Nullam at odio in sem varius tempor sit amet vel lorem. Etiam eu hendrerit nisl. Fusce nibh mauris, vulputate sit amet ex vitae, congue rhoncus nisl. Sed eget tellus purus. Nullam tempus commodo erat ut tristique. Cras accumsan massa sit amet justo consequat eleifend. Integer scelerisque vitae tellus id consectetur.`));};MDXContent.isMDXComponent=true;
+const frontMatter={id:'doc3',title:'This is Document Number 3'};const metadata={"id":"doc3","title":"This is Document Number 3","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.","source":"@site/docs/doc3.md","permalink":"/wga-docs/docs/doc3","editUrl":"https://github.com/eugenedm/wga-docs/edit/master/website/docs/doc3.md","sidebar":"someSidebar","previous":{"title":"Document Number 2","permalink":"/wga-docs/docs/doc2"},"next":{"title":"Powered by MDX","permalink":"/wga-docs/docs/mdx"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Duis et egestas libero, imperdiet faucibus ipsum. Sed posuere eget urna vel feugiat. Vivamus a arcu sagittis, fermentum urna dapibus, congue lectus. Fusce vulputate porttitor nisl, ac cursus elit volutpat vitae. Nullam vitae ipsum egestas, convallis quam non, porta nibh. Morbi gravida erat nec neque bibendum, eu pellentesque velit posuere. Fusce aliquam erat eu massa eleifend tristique.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Sed consequat sollicitudin ipsum eget tempus. Integer a aliquet velit. In justo nibh, pellentesque non suscipit eget, gravida vel lacus. Donec odio ante, malesuada in massa quis, pharetra tristique ligula. Donec eros est, tristique eget finibus quis, semper non nisl. Vivamus et elit nec enim ornare placerat. Sed posuere odio a elit cursus sagittis.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Phasellus feugiat purus eu tortor ultrices finibus. Ut libero nibh, lobortis et libero nec, dapibus posuere eros. Sed sagittis euismod justo at consectetur. Nulla finibus libero placerat, cursus sapien at, eleifend ligula. Vivamus elit nisl, hendrerit ac nibh eu, ultrices tempus dui. Nam tellus neque, commodo non rhoncus eu, gravida in risus. Nullam id iaculis tortor.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Nullam at odio in sem varius tempor sit amet vel lorem. Etiam eu hendrerit nisl. Fusce nibh mauris, vulputate sit amet ex vitae, congue rhoncus nisl. Sed eget tellus purus. Nullam tempus commodo erat ut tristique. Cras accumsan massa sit amet justo consequat eleifend. Integer scelerisque vitae tellus id consectetur.`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
 /* 120 */
@@ -15430,7 +15430,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-const frontMatter={id:'doc1',title:'Style Guide',sidebar_label:'Style Guide'};const metadata={"id":"doc1","title":"Style Guide","description":"You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).","source":"@site/docs/doc1.md","permalink":"/wga-docs/docs/doc1","editUrl":"https://github.com/eugenedm/wga-docs/edit/master/docs/doc1.md","sidebar_label":"Style Guide","sidebar":"someSidebar","next":{"title":"Document Number 2","permalink":"/wga-docs/docs/doc2"}};/* @jsx mdx */const rightToc=[{value:'Markdown Syntax',id:'markdown-syntax',children:[]},{value:'Headers',id:'headers',children:[]},{value:'H2 - Create the best documentation',id:'h2---create-the-best-documentation',children:[{value:'H3 - Create the best documentation',id:'h3---create-the-best-documentation',children:[]}]},{value:'Emphasis',id:'emphasis',children:[]},{value:'Lists',id:'lists',children:[]},{value:'Links',id:'links',children:[]},{value:'Images',id:'images',children:[]},{value:'Code',id:'code',children:[]},{value:'Tables',id:'tables',children:[]},{value:'Blockquotes',id:'blockquotes',children:[]},{value:'Inline HTML',id:'inline-html',children:[]},{value:'Line Breaks',id:'line-breaks',children:[]},{value:'Admonitions',id:'admonitions',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can write content using `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.github.com/gfm/"}),`GitHub-flavored Markdown syntax`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"markdown-syntax"},`Markdown Syntax`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`To serve as an example page when styling markdown based Docusaurus sites.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"headers"},`Headers`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h1",{"id":"h1---create-the-best-documentation"},`H1 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"h2---create-the-best-documentation"},`H2 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"h3---create-the-best-documentation"},`H3 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h4",{"id":"h4---create-the-best-documentation"},`H4 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h5",{"id":"h5---create-the-best-documentation"},`H5 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h6",{"id":"h6---create-the-best-documentation"},`H6 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("hr",null),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"emphasis"},`Emphasis`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Emphasis, aka italics, with `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`asterisks`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`underscores`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Strong emphasis, aka bold, with `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`asterisks`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`underscores`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Combined emphasis with `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`asterisks and `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"strong"},`underscores`)),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Strikethrough uses two tildes. `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("del",{parentName:"p"},`Scratch this.`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("hr",null),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"lists"},`Lists`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ol",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`First ordered list item`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Another item ⋅⋅`,`*`,` Unordered sub-list.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Actual numbers don't matter, just that it's a number ⋅⋅1. Ordered sub-list`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`And another item.`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅ ⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅ ⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`Unordered list can use asterisks`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`Or minuses`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`Or pluses`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("hr",null),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"links"},`Links`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://www.google.com"}),`I'm an inline-style link`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://www.google.com","title":"Google's Homepage"}),`I'm an inline-style link with title`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://www.mozilla.org"}),`I'm a reference-style link`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"../blob/master/LICENSE"}),`I'm a relative reference to a repository file`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://slashdot.org"}),`You can use numbers for reference-style link definitions`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Or leave it empty and use the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://www.reddit.com"}),`link text itself`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`URLs and URLs in angle brackets will automatically get turned into links. `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://www.example.com"}),`http://www.example.com`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://www.example.com"}),`http://www.example.com`),` and sometimes example.com (but not on Github, for example).`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Some text to show that the reference links can follow later.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("hr",null),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"images"},`Images`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Here's our logo (hover to see the title text):`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Inline-style: `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("img",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"src":"https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png","alt":"alt text","title":"Logo Title Text 1"}))),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Reference-style: `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("img",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"src":"https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png","alt":"alt text","title":"Logo Title Text 2"}))),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("hr",null),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"code"},`Code`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-javascript"}),`var s = 'JavaScript syntax highlighting';
+const frontMatter={id:'doc1',title:'Style Guide',sidebar_label:'Style Guide'};const metadata={"id":"doc1","title":"Style Guide","description":"You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).","source":"@site/docs/doc1.md","permalink":"/wga-docs/docs/doc1","editUrl":"https://github.com/eugenedm/wga-docs/edit/master/website/docs/doc1.md","sidebar_label":"Style Guide","sidebar":"someSidebar","next":{"title":"Document Number 2","permalink":"/wga-docs/docs/doc2"}};/* @jsx mdx */const rightToc=[{value:'Markdown Syntax',id:'markdown-syntax',children:[]},{value:'Headers',id:'headers',children:[]},{value:'H2 - Create the best documentation',id:'h2---create-the-best-documentation',children:[{value:'H3 - Create the best documentation',id:'h3---create-the-best-documentation',children:[]}]},{value:'Emphasis',id:'emphasis',children:[]},{value:'Lists',id:'lists',children:[]},{value:'Links',id:'links',children:[]},{value:'Images',id:'images',children:[]},{value:'Code',id:'code',children:[]},{value:'Tables',id:'tables',children:[]},{value:'Blockquotes',id:'blockquotes',children:[]},{value:'Inline HTML',id:'inline-html',children:[]},{value:'Line Breaks',id:'line-breaks',children:[]},{value:'Admonitions',id:'admonitions',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can write content using `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.github.com/gfm/"}),`GitHub-flavored Markdown syntax`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"markdown-syntax"},`Markdown Syntax`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`To serve as an example page when styling markdown based Docusaurus sites.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"headers"},`Headers`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h1",{"id":"h1---create-the-best-documentation"},`H1 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"h2---create-the-best-documentation"},`H2 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"h3---create-the-best-documentation"},`H3 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h4",{"id":"h4---create-the-best-documentation"},`H4 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h5",{"id":"h5---create-the-best-documentation"},`H5 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h6",{"id":"h6---create-the-best-documentation"},`H6 - Create the best documentation`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("hr",null),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"emphasis"},`Emphasis`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Emphasis, aka italics, with `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`asterisks`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`underscores`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Strong emphasis, aka bold, with `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`asterisks`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`underscores`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Combined emphasis with `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`asterisks and `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"strong"},`underscores`)),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Strikethrough uses two tildes. `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("del",{parentName:"p"},`Scratch this.`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("hr",null),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"lists"},`Lists`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ol",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`First ordered list item`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Another item ⋅⋅`,`*`,` Unordered sub-list.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Actual numbers don't matter, just that it's a number ⋅⋅1. Ordered sub-list`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`And another item.`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅ ⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅ ⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`Unordered list can use asterisks`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`Or minuses`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`Or pluses`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("hr",null),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"links"},`Links`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://www.google.com"}),`I'm an inline-style link`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://www.google.com","title":"Google's Homepage"}),`I'm an inline-style link with title`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://www.mozilla.org"}),`I'm a reference-style link`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"../blob/master/LICENSE"}),`I'm a relative reference to a repository file`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://slashdot.org"}),`You can use numbers for reference-style link definitions`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Or leave it empty and use the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://www.reddit.com"}),`link text itself`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`URLs and URLs in angle brackets will automatically get turned into links. `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://www.example.com"}),`http://www.example.com`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://www.example.com"}),`http://www.example.com`),` and sometimes example.com (but not on Github, for example).`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Some text to show that the reference links can follow later.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("hr",null),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"images"},`Images`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Here's our logo (hover to see the title text):`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Inline-style: `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("img",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"src":"https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png","alt":"alt text","title":"Logo Title Text 1"}))),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Reference-style: `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("img",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"src":"https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png","alt":"alt text","title":"Logo Title Text 2"}))),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("hr",null),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"code"},`Code`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-javascript"}),`var s = 'JavaScript syntax highlighting';
 alert(s);
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-python"}),`s = "Python syntax highlighting"
 print(s)
@@ -15491,7 +15491,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-const frontMatter={id:'mdx',title:'Powered by MDX'};const metadata={"id":"mdx","title":"Powered by MDX","description":"You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/).","source":"@site/docs/mdx.md","permalink":"/wga-docs/docs/mdx","editUrl":"https://github.com/eugenedm/wga-docs/edit/master/docs/mdx.md","sidebar":"someSidebar","previous":{"title":"This is Document Number 3","permalink":"/wga-docs/docs/doc3"}};/* @jsx mdx */const rightToc=[];const Highlight=({children,color})=>Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("span",{style:{backgroundColor:color,borderRadius:'2px',color:'#fff',padding:'0.2rem'}}," ",children," ");const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc,Highlight};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can write JSX and use React components within your Markdown thanks to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://mdxjs.com/"}),`MDX`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(Highlight,{color:"#25c2a0",mdxType:"Highlight"},"Docusaurus green")," and ",Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(Highlight,{color:"#1877F2",mdxType:"Highlight"},"Facebook blue")," are my favorite colors.",Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`I can write `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Markdown`),` alongside my `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`JSX`),`!`));};MDXContent.isMDXComponent=true;
+const frontMatter={id:'mdx',title:'Powered by MDX'};const metadata={"id":"mdx","title":"Powered by MDX","description":"You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/).","source":"@site/docs/mdx.md","permalink":"/wga-docs/docs/mdx","editUrl":"https://github.com/eugenedm/wga-docs/edit/master/website/docs/mdx.md","sidebar":"someSidebar","previous":{"title":"This is Document Number 3","permalink":"/wga-docs/docs/doc3"}};/* @jsx mdx */const rightToc=[];const Highlight=({children,color})=>Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("span",{style:{backgroundColor:color,borderRadius:'2px',color:'#fff',padding:'0.2rem'}}," ",children," ");const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc,Highlight};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can write JSX and use React components within your Markdown thanks to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://mdxjs.com/"}),`MDX`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(Highlight,{color:"#25c2a0",mdxType:"Highlight"},"Docusaurus green")," and ",Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(Highlight,{color:"#1877F2",mdxType:"Highlight"},"Facebook blue")," are my favorite colors.",Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`I can write `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Markdown`),` alongside my `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("em",{parentName:"p"},`JSX`),`!`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
 /* 130 */
@@ -15523,7 +15523,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
-const frontMatter={id:'doc2',title:'Document Number 2'};const metadata={"id":"doc2","title":"Document Number 2","description":"This is a link to [another document.](doc3.md) This is a link to an [external page.](http://www.example.com)","source":"@site/docs/doc2.md","permalink":"/wga-docs/docs/doc2","editUrl":"https://github.com/eugenedm/wga-docs/edit/master/docs/doc2.md","sidebar":"someSidebar","previous":{"title":"Style Guide","permalink":"/wga-docs/docs/doc1"},"next":{"title":"This is Document Number 3","permalink":"/wga-docs/docs/doc3"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`This is a link to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"/wga-docs/docs/doc3"}),`another document.`),` This is a link to an `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://www.example.com"}),`external page.`)));};MDXContent.isMDXComponent=true;
+const frontMatter={id:'doc2',title:'Document Number 2'};const metadata={"id":"doc2","title":"Document Number 2","description":"This is a link to [another document.](doc3.md) This is a link to an [external page.](http://www.example.com)","source":"@site/docs/doc2.md","permalink":"/wga-docs/docs/doc2","editUrl":"https://github.com/eugenedm/wga-docs/edit/master/website/docs/doc2.md","sidebar":"someSidebar","previous":{"title":"Style Guide","permalink":"/wga-docs/docs/doc1"},"next":{"title":"This is Document Number 3","permalink":"/wga-docs/docs/doc3"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`This is a link to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"/wga-docs/docs/doc3"}),`another document.`),` This is a link to an `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_Users_naughty_code_wga_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://www.example.com"}),`external page.`)));};MDXContent.isMDXComponent=true;
 
 /***/ }),
 /* 132 */
@@ -17827,7 +17827,7 @@ module.exports = {
 /*!
  * clipboard.js v2.0.6
  * https://clipboardjs.com/
- *
+ * 
  * Licensed MIT © Zeno Rocha
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -26959,7 +26959,7 @@ IndexedSourceMapConsumer.prototype.sourceContentFor =
  * and an object is returned with the following properties:
  *
  *   - line: The line number in the generated source, or null.  The
- *     line number is 1-based.
+ *     line number is 1-based. 
  *   - column: The column number in the generated source, or null.
  *     The column number is 0-based.
  */
@@ -30424,7 +30424,7 @@ function RelateUrl(from, options)
 		site: undefined,
 		slashesDenoteHost: true
 	});
-
+	
 	this.from = parseUrl.from(from, this.options, null);
 }
 
@@ -30448,11 +30448,11 @@ RelateUrl.prototype.relate = function(from, to, options)
 		to = from;
 		from = null;
 	}
-
+	
 	options = getOptions(options, this.options);
 	from = from || options.site;
 	from = parseUrl.from(from, options, this.from);
-
+	
 	if (!from || !from.href)
 	{
 		throw new Error("from value not defined.");
@@ -30461,14 +30461,14 @@ RelateUrl.prototype.relate = function(from, to, options)
 	{
 		throw new Error("from value supplied is not absolute: "+from.href);
 	}
-
+	
 	to = parseUrl.to(to, options);
-
+	
 	if (to.valid===false) return to.href;
-
+	
 	to = relateUrl(from, to, options);
 	to = formatUrl(to, options);
-
+	
 	return to;
 }
 
@@ -30509,7 +30509,7 @@ function formatAuth(urlObj, options)
 	{
 		return urlObj.auth + "@";
 	}
-
+	
 	return "";
 }
 
@@ -30528,7 +30528,7 @@ function formatHost(urlObj, options)
 	{
 		return urlObj.host.full;
 	}
-
+	
 	return "";
 }
 
@@ -30537,11 +30537,11 @@ function formatHost(urlObj, options)
 function formatPath(urlObj, options)
 {
 	var str = "";
-
+	
 	var absolutePath = urlObj.path.absolute.string;
 	var relativePath = urlObj.path.relative.string;
 	var resource = showResource(urlObj, options);
-
+	
 	if (urlObj.extra.relation.maximumHost || options.output===constants.ABSOLUTE || options.output===constants.ROOT_RELATIVE)
 	{
 		str = absolutePath;
@@ -30549,11 +30549,11 @@ function formatPath(urlObj, options)
 	else if (relativePath.length<=absolutePath.length && options.output===constants.SHORTEST || options.output===constants.PATH_RELATIVE)
 	{
 		str = relativePath;
-
+		
 		if (str === "")
 		{
 			var query = showQuery(urlObj,options) && !!getQuery(urlObj,options);
-
+			
 			if (urlObj.extra.relation.maximumPath && !resource)
 			{
 				str = "./";
@@ -30568,12 +30568,12 @@ function formatPath(urlObj, options)
 	{
 		str = absolutePath;
 	}
-
+	
 	if ( str==="/" && !resource && options.removeRootTrailingSlash && (!urlObj.extra.relation.minimumPort || options.output===constants.ABSOLUTE) )
 	{
 		str = "";
 	}
-
+	
 	return str;
 }
 
@@ -30585,7 +30585,7 @@ function formatPort(urlObj, options)
 	{
 		return ":" + urlObj.port;
 	}
-
+	
 	return "";
 }
 
@@ -30608,7 +30608,7 @@ function formatResource(urlObj, options)
 function formatScheme(urlObj, options)
 {
 	var str = "";
-
+	
 	if (urlObj.extra.relation.maximumHost || options.output===constants.ABSOLUTE)
 	{
 		if (!urlObj.extra.relation.minimumScheme || !options.schemeRelative || options.output===constants.ABSOLUTE)
@@ -30620,7 +30620,7 @@ function formatScheme(urlObj, options)
 			str += "//";
 		}
 	}
-
+	
 	return str;
 }
 
@@ -30629,7 +30629,7 @@ function formatScheme(urlObj, options)
 function formatUrl(urlObj, options)
 {
 	var url = "";
-
+	
 	url += formatScheme(urlObj, options);
 	url += formatAuth(urlObj, options);
 	url += formatHost(urlObj, options);
@@ -30638,7 +30638,7 @@ function formatUrl(urlObj, options)
 	url += formatResource(urlObj, options);
 	url += formatQuery(urlObj, options);
 	url += formatHash(urlObj, options);
-
+	
 	return url;
 }
 
@@ -30647,7 +30647,7 @@ function formatUrl(urlObj, options)
 function getQuery(urlObj, options)
 {
 	var stripQuery = options.removeEmptyQueries && urlObj.extra.relation.minimumPort;
-
+	
 	return urlObj.query.string[ stripQuery ? "stripped" : "full" ];
 }
 
@@ -30664,7 +30664,7 @@ function showResource(urlObj, options)
 {
 	var removeIndex = options.removeDirectoryIndexes && urlObj.extra.resourceIsIndex;
 	var removeMatchingResource = urlObj.extra.relation.minimumResource && options.output!==constants.ABSOLUTE && options.output!==constants.ROOT_RELATIVE;
-
+	
 	return !!urlObj.resource && !removeMatchingResource && !removeIndex;
 }
 
@@ -30689,7 +30689,7 @@ function getOptions(options, defaults)
 	if ( objUtils.isPlainObject(options) )
 	{
 		var newOptions = {};
-
+		
 		for (var i in defaults)
 		{
 			if ( defaults.hasOwnProperty(i) )
@@ -30704,7 +30704,7 @@ function getOptions(options, defaults)
 				}
 			}
 		}
-
+		
 		return newOptions;
 	}
 	else
@@ -30728,7 +30728,7 @@ function mergeOption(newValues, defaultValues)
 			return objUtils.shallowMerge(newValues, defaultValues);
 		}
 	}
-
+	
 	return newValues;
 }
 
@@ -30759,15 +30759,15 @@ function parseFromUrl(url, options, fallback)
 	if (url)
 	{
 		var urlObj = parseUrl(url, options);
-
+		
 		// Because the following occurs in the relate stage for "to" URLs,
 		// such had to be mostly duplicated here
-
+		
 		var pathArray = pathUtils.resolveDotSegments(urlObj.path.absolute.array);
-
+		
 		urlObj.path.absolute.array  = pathArray;
 		urlObj.path.absolute.string = "/" + pathUtils.join(pathArray);
-
+		
 		return urlObj;
 	}
 	else
@@ -30781,15 +30781,15 @@ function parseFromUrl(url, options, fallback)
 function parseUrl(url, options)
 {
 	var urlObj = parseUrlString(url, options);
-
+	
 	if (urlObj.valid===false) return urlObj;
-
+	
 	parseHost(urlObj, options);
 	parsePort(urlObj, options);
 	parsePath(urlObj, options);
 	parseQuery(urlObj, options);
 	hrefInfo(urlObj);
-
+	
 	return urlObj;
 }
 
@@ -30816,7 +30816,7 @@ function hrefInfo(urlObj)
 	var minimumQueryOnly    = (minimumResourceOnly && !urlObj.resource);
 	var minimumHashOnly     = (minimumQueryOnly && !urlObj.query.string.full.length);
 	var empty               = (minimumHashOnly && !urlObj.hash);
-
+	
 	urlObj.extra.hrefInfo.minimumPathOnly     = minimumPathOnly;
 	urlObj.extra.hrefInfo.minimumResourceOnly = minimumResourceOnly;
 	urlObj.extra.hrefInfo.minimumQueryOnly    = minimumQueryOnly;
@@ -30842,16 +30842,16 @@ function parseHost(urlObj, options)
 	if (options.ignore_www)
 	{
 		var host = urlObj.host.full;
-
+		
 		if (host)
 		{
 			var stripped = host;
-
+			
 			if (host.indexOf("www.") === 0)
 			{
 				stripped = host.substr(4);
 			}
-
+			
 			urlObj.host.stripped = stripped;
 		}
 	}
@@ -30872,7 +30872,7 @@ module.exports = parseHost;
 function isDirectoryIndex(resource, options)
 {
 	var verdict = false;
-
+	
 	options.directoryIndexes.every( function(index)
 	{
 		if (index === resource)
@@ -30880,10 +30880,10 @@ function isDirectoryIndex(resource, options)
 			verdict = true;
 			return false;
 		}
-
+		
 		return true;
 	});
-
+	
 	return verdict;
 }
 
@@ -30892,17 +30892,17 @@ function isDirectoryIndex(resource, options)
 function parsePath(urlObj, options)
 {
 	var path = urlObj.path.absolute.string;
-
+	
 	if (path)
 	{
 		var lastSlash = path.lastIndexOf("/");
-
+		
 		if (lastSlash > -1)
 		{
 			if (++lastSlash < path.length)
 			{
 				var resource = path.substr(lastSlash);
-
+				
 				if (resource!=="." && resource!=="..")
 				{
 					urlObj.resource = resource;
@@ -30913,7 +30913,7 @@ function parsePath(urlObj, options)
 					path += "/";
 				}
 			}
-
+			
 			urlObj.path.absolute.string = path;
 			urlObj.path.absolute.array = splitPath(path);
 		}
@@ -30921,7 +30921,7 @@ function parsePath(urlObj, options)
 		{
 			// "..?var", "..#anchor", etc ... not "..index.html"
 			path += "/";
-
+			
 			urlObj.path.absolute.string = path;
 			urlObj.path.absolute.array = splitPath(path);
 		}
@@ -30931,7 +30931,7 @@ function parsePath(urlObj, options)
 			urlObj.resource = path;
 			urlObj.path.absolute.string = null;
 		}
-
+		
 		urlObj.extra.resourceIsIndex = isDirectoryIndex(urlObj.resource, options);
 	}
 	// Else: query/hash-only or empty
@@ -30945,7 +30945,7 @@ function splitPath(path)
 	if (path !== "/")
 	{
 		var cleaned = [];
-
+		
 		path.split("/").forEach( function(dir)
 		{
 			// Cleanup -- splitting "/dir/" becomes ["","dir",""]
@@ -30954,7 +30954,7 @@ function splitPath(path)
 				cleaned.push(dir);
 			}
 		});
-
+		
 		return cleaned;
 	}
 	else
@@ -30979,7 +30979,7 @@ module.exports = parsePath;
 function parsePort(urlObj, options)
 {
 	var defaultPort = -1;
-
+	
 	for (var i in options.defaultPorts)
 	{
 		if ( i===urlObj.scheme && options.defaultPorts.hasOwnProperty(i) )
@@ -30988,17 +30988,17 @@ function parsePort(urlObj, options)
 			break;
 		}
 	}
-
+	
 	if (defaultPort > -1)
 	{
 		// Force same type as urlObj.port
 		defaultPort = defaultPort.toString();
-
+		
 		if (urlObj.port === null)
 		{
 			urlObj.port = defaultPort;
 		}
-
+		
 		urlObj.extra.portIsDefault = (urlObj.port === defaultPort);
 	}
 }
@@ -31021,7 +31021,7 @@ var hasOwnProperty = Object.prototype.hasOwnProperty;
 function parseQuery(urlObj, options)
 {
 	urlObj.query.string.full = stringify(urlObj.query.object, false);
-
+	
 	// TWEAK :: condition only for speed optimization
 	if (options.removeEmptyQueries)
 	{
@@ -31035,19 +31035,19 @@ function stringify(queryObj, removeEmptyQueries)
 {
 	var count = 0;
 	var str = "";
-
+	
 	for (var i in queryObj)
 	{
 		if ( i!=="" && hasOwnProperty.call(queryObj, i)===true )
 		{
 			var value = queryObj[i];
-
+			
 			if (value !== "" || !removeEmptyQueries)
 			{
 				str += (++count===1) ? "?" : "&";
-
+				
 				i = encodeURIComponent(i);
-
+				
 				if (value !== "")
 				{
 					str += i +"="+ encodeURIComponent(value).replace(/%20/g,"+");
@@ -31059,7 +31059,7 @@ function stringify(queryObj, removeEmptyQueries)
 			}
 		}
 	}
-
+	
 	return str;
 }
 
@@ -31082,7 +31082,7 @@ var _parseUrl = __webpack_require__(25).parse;
 /*
 	Customize the URL object that Node generates
 	because:
-
+	
 	* necessary data for later
 	* urlObj.host is useless
 	* urlObj.hostname is too long
@@ -31094,7 +31094,7 @@ var _parseUrl = __webpack_require__(25).parse;
 function clean(urlObj)
 {
 	var scheme = urlObj.protocol;
-
+	
 	if (scheme)
 	{
 		// Remove ":" suffix
@@ -31103,14 +31103,14 @@ function clean(urlObj)
 			scheme = scheme.substr(0, scheme.length-1);
 		}
 	}
-
+	
 	urlObj.host =
 	{
 		// TODO :: unescape(encodeURIComponent(s)) ? ... http://ecmanaut.blogspot.ca/2006/07/encoding-decoding-utf8-in-javascript.html
 		full: urlObj.hostname,
 		stripped: null
 	};
-
+	
 	urlObj.path =
 	{
 		absolute:
@@ -31124,7 +31124,7 @@ function clean(urlObj)
 			string: null
 		}
 	};
-
+	
 	urlObj.query =
 	{
 		object: urlObj.query,
@@ -31134,7 +31134,7 @@ function clean(urlObj)
 			stripped: null
 		}
 	};
-
+	
 	urlObj.extra =
 	{
 		hrefInfo:
@@ -31144,7 +31144,7 @@ function clean(urlObj)
 			minimumQueryOnly: null,
 			minimumHashOnly: null,
 			empty: null,
-
+			
 			separatorOnlyQuery: urlObj.search==="?"
 		},
 		portIsDefault: null,
@@ -31158,7 +31158,7 @@ function clean(urlObj)
 			maximumResource: null,
 			maximumQuery: null,
 			maximumHash: null,
-
+			
 			minimumScheme: null,
 			minimumAuth: null,
 			minimumHost: null,
@@ -31167,13 +31167,13 @@ function clean(urlObj)
 			minimumResource: null,
 			minimumQuery: null,
 			minimumHash: null,
-
+			
 			overridesQuery: null
 		},
 		resourceIsIndex: null,
 		slashes: urlObj.slashes
 	};
-
+	
 	urlObj.resource = null;
 	urlObj.scheme = scheme;
 	delete urlObj.hostname;
@@ -31181,7 +31181,7 @@ function clean(urlObj)
 	delete urlObj.protocol;
 	delete urlObj.search;
 	delete urlObj.slashes;
-
+	
 	return urlObj;
 }
 
@@ -31190,15 +31190,15 @@ function clean(urlObj)
 function validScheme(url, options)
 {
 	var valid = true;
-
+	
 	options.rejectedSchemes.every( function(rejectedScheme)
 	{
 		valid = !(url.indexOf(rejectedScheme+":") === 0);
-
+		
 		// Break loop
 		return valid;
 	});
-
+	
 	return valid;
 }
 
@@ -31237,7 +31237,7 @@ function relateUrl(siteUrlObj, urlObj, options)
 {
 	absolutize(urlObj, siteUrlObj, options);
 	relativize(urlObj, siteUrlObj, options);
-
+	
 	return urlObj;
 }
 
@@ -31262,17 +31262,17 @@ var pathUtils    = __webpack_require__(80);
 function absolutize(urlObj, siteUrlObj, options)
 {
 	findRelation.upToPath(urlObj, siteUrlObj, options);
-
+	
 	// Fill in relative URLs
 	if (urlObj.extra.relation.minimumScheme) urlObj.scheme = siteUrlObj.scheme;
 	if (urlObj.extra.relation.minimumAuth)   urlObj.auth   = siteUrlObj.auth;
 	if (urlObj.extra.relation.minimumHost)   urlObj.host   = objUtils.clone(siteUrlObj.host);
 	if (urlObj.extra.relation.minimumPort)   copyPort(urlObj, siteUrlObj);
 	if (urlObj.extra.relation.minimumScheme) copyPath(urlObj, siteUrlObj);
-
+	
 	// Check remaining relativeness now that path has been copied and/or resolved
 	findRelation.pathOn(urlObj, siteUrlObj, options);
-
+	
 	// Fill in relative URLs
 	if (urlObj.extra.relation.minimumResource) copyResource(urlObj, siteUrlObj);
 	if (urlObj.extra.relation.minimumQuery)    urlObj.query = objUtils.clone(siteUrlObj.query);
@@ -31290,7 +31290,7 @@ function copyPath(urlObj, siteUrlObj)
 	{
 		var pathArray = urlObj.path.absolute.array;
 		var pathString = "/";
-
+		
 		// If not erroneous URL
 		if (pathArray)
 		{
@@ -31300,7 +31300,7 @@ function copyPath(urlObj, siteUrlObj)
 				// Append path to site path
 				pathArray = siteUrlObj.path.absolute.array.concat(pathArray);
 			}
-
+			
 			pathArray   = pathUtils.resolveDotSegments(pathArray);
 			pathString += pathUtils.join(pathArray);
 		}
@@ -31308,7 +31308,7 @@ function copyPath(urlObj, siteUrlObj)
 		{
 			pathArray = [];
 		}
-
+		
 		urlObj.path.absolute.array  = pathArray;
 		urlObj.path.absolute.string = pathString;
 	}
@@ -31324,7 +31324,7 @@ function copyPath(urlObj, siteUrlObj)
 function copyPort(urlObj, siteUrlObj)
 {
 	urlObj.port = siteUrlObj.port;
-
+	
 	urlObj.extra.portIsDefault = siteUrlObj.extra.portIsDefault;
 }
 
@@ -31333,7 +31333,7 @@ function copyPort(urlObj, siteUrlObj)
 function copyResource(urlObj, siteUrlObj)
 {
 	urlObj.resource = siteUrlObj.resource;
-
+	
 	urlObj.extra.resourceIsIndex = siteUrlObj.extra.resourceIsIndex;
 }
 
@@ -31353,25 +31353,25 @@ function findRelation_upToPath(urlObj, siteUrlObj, options)
 {
 	// Path- or root-relative URL
 	var pathOnly = urlObj.extra.hrefInfo.minimumPathOnly;
-
+	
 	// Matching scheme, scheme-relative or path-only
 	var minimumScheme = (urlObj.scheme===siteUrlObj.scheme || !urlObj.scheme);
-
+	
 	// Matching auth, ignoring auth or path-only
 	var minimumAuth = minimumScheme && (urlObj.auth===siteUrlObj.auth || options.removeAuth || pathOnly);
-
+	
 	// Matching host or path-only
 	var www = options.ignore_www ? "stripped" : "full";
 	var minimumHost = minimumAuth && (urlObj.host[www]===siteUrlObj.host[www] || pathOnly);
-
+	
 	// Matching port or path-only
 	var minimumPort = minimumHost && (urlObj.port===siteUrlObj.port || pathOnly);
-
+	
 	urlObj.extra.relation.minimumScheme = minimumScheme;
 	urlObj.extra.relation.minimumAuth   = minimumAuth;
 	urlObj.extra.relation.minimumHost   = minimumHost;
 	urlObj.extra.relation.minimumPort   = minimumPort;
-
+	
 	urlObj.extra.relation.maximumScheme = !minimumScheme || minimumScheme && !minimumAuth;
 	urlObj.extra.relation.maximumAuth   = !minimumScheme || minimumScheme && !minimumHost;
 	urlObj.extra.relation.maximumHost   = !minimumScheme || minimumScheme && !minimumPort;
@@ -31384,37 +31384,37 @@ function findRelation_pathOn(urlObj, siteUrlObj, options)
 	var queryOnly = urlObj.extra.hrefInfo.minimumQueryOnly;
 	var hashOnly  = urlObj.extra.hrefInfo.minimumHashOnly;
 	var empty     = urlObj.extra.hrefInfo.empty;	// not required, but self-documenting
-
+	
 	// From upToPath()
 	var minimumPort   = urlObj.extra.relation.minimumPort;
 	var minimumScheme = urlObj.extra.relation.minimumScheme;
-
+	
 	// Matching port and path
 	var minimumPath = minimumPort && urlObj.path.absolute.string===siteUrlObj.path.absolute.string;
-
+	
 	// Matching resource or query/hash-only or empty
 	var matchingResource = (urlObj.resource===siteUrlObj.resource || !urlObj.resource && siteUrlObj.extra.resourceIsIndex) || (options.removeDirectoryIndexes && urlObj.extra.resourceIsIndex && !siteUrlObj.resource);
 	var minimumResource = minimumPath && (matchingResource || queryOnly || hashOnly || empty);
-
+	
 	// Matching query or hash-only/empty
 	var query = options.removeEmptyQueries ? "stripped" : "full";
 	var urlQuery = urlObj.query.string[query];
 	var siteUrlQuery = siteUrlObj.query.string[query];
 	var minimumQuery = (minimumResource && !!urlQuery && urlQuery===siteUrlQuery) || ((hashOnly || empty) && !urlObj.extra.hrefInfo.separatorOnlyQuery);
-
+	
 	var minimumHash = minimumQuery && urlObj.hash===siteUrlObj.hash;
-
+	
 	urlObj.extra.relation.minimumPath     = minimumPath;
 	urlObj.extra.relation.minimumResource = minimumResource;
 	urlObj.extra.relation.minimumQuery    = minimumQuery;
 	urlObj.extra.relation.minimumHash     = minimumHash;
-
+	
 	urlObj.extra.relation.maximumPort     = !minimumScheme || minimumScheme && !minimumPath;
 	urlObj.extra.relation.maximumPath     = !minimumScheme || minimumScheme && !minimumResource;
 	urlObj.extra.relation.maximumResource = !minimumScheme || minimumScheme && !minimumQuery;
 	urlObj.extra.relation.maximumQuery    = !minimumScheme || minimumScheme && !minimumHash;
 	urlObj.extra.relation.maximumHash     = !minimumScheme || minimumScheme && !minimumHash;	// there's nothing after hash, so it's the same as maximumQuery
-
+	
 	// Matching path and/or resource with existing but non-matching site query
 	urlObj.extra.relation.overridesQuery  = minimumPath && urlObj.extra.relation.maximumResource && !minimumQuery && !!siteUrlQuery;
 }
@@ -31445,11 +31445,11 @@ var pathUtils = __webpack_require__(80);
 function relatePath(absolutePath, siteAbsolutePath)
 {
 	var relativePath = [];
-
+	
 	// At this point, it's related to the host/port
 	var related = true;
 	var parentIndex = -1;
-
+	
 	// Find parents
 	siteAbsolutePath.forEach( function(siteAbsoluteDir, i)
 	{
@@ -31464,14 +31464,14 @@ function relatePath(absolutePath, siteAbsolutePath)
 				parentIndex = i;
 			}
 		}
-
+		
 		if (!related)
 		{
 			// Up one level
 			relativePath.push("..");
 		}
 	});
-
+	
 	// Form path
 	absolutePath.forEach( function(dir, i)
 	{
@@ -31480,7 +31480,7 @@ function relatePath(absolutePath, siteAbsolutePath)
 			relativePath.push(dir);
 		}
 	});
-
+	
 	return relativePath;
 }
 
@@ -31491,7 +31491,7 @@ function relativize(urlObj, siteUrlObj, options)
 	if (urlObj.extra.relation.minimumScheme)
 	{
 		var pathArray = relatePath(urlObj.path.absolute.array, siteUrlObj.path.absolute.array);
-
+		
 		urlObj.path.relative.array  = pathArray;
 		urlObj.path.relative.string = pathUtils.join(pathArray);
 	}
