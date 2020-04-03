@@ -4,8 +4,8 @@ module.exports = {
   url: 'https://eugenedm.github.io',
   baseUrl: '/wga-docs/',
   favicon: 'img/favicon.ico',
-  organizationName: 'Gene Adam', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'eugenedm', // Usually your GitHub org/user name.
+  projectName: 'wga-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'My Site',
