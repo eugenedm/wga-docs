@@ -2,7 +2,7 @@ module.exports = {
   title: 'WGA',
   tagline: 'WGA docs',
   url: 'https://eugenedm.github.io',
-  baseUrl: '/wga-docs/',
+  baseUrl: '/wga-docs/', // leave blank if you use zeit.co, tested 
   favicon: 'img/favicon.ico',
   organizationName: 'eugenedm', // Usually your GitHub org/user name.
   projectName: 'wga-docs', // Usually your repo name.
