@@ -3,8 +3,7 @@ id: doc1
 title: Style Guide
 sidebar_label: Style Guide
 ---
-
-Yooooooooo mannnnnnnnnn now and now
+🙃😝😭😭  now and now
 
 You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
 
